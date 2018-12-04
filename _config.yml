@@ -11,6 +11,8 @@ baseurl:
 social:
   - title: linkedin
     url: https://www.linkedin.com/in/jdgoodall1/
+  - title: github
+    url: https://github.com/jdgoodall1
     
 # Google webmaster tools
 google_verify: L2VsLI1uLyBPXQKO65ErOx1V5NYRQstKixSdR4HQW60
