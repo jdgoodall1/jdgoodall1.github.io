@@ -4,7 +4,7 @@ email: jon@robustsoftwareltd.co.uk
 #canonical_url: https://jdgoodall1.github.io
 keywords: "DevOps, Agile, Terraform, Ansible, Hashicorp, Vault, AWS, Jenkins"
 skills: "DevOps Engineer in Sussex"
-baseurl:
+baseurl: "https://jdgoodall1.github.io"
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 # You should replace these with your social networks, of course. :)
@@ -13,6 +13,8 @@ social:
     url: https://www.linkedin.com/in/jdgoodall1/
   - title: github
     url: https://github.com/jdgoodall1
+  - title: medium
+    url: https://medium.com/@jdgoodall1
     
 # Google webmaster tools
 google_verify: L2VsLI1uLyBPXQKO65ErOx1V5NYRQstKixSdR4HQW60
