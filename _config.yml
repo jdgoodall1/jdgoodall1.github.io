@@ -13,12 +13,12 @@ social:
     url: https://www.linkedin.com/in/jdgoodall1/
   - title: github
     url: https://github.com/jdgoodall1
+  - title: wordpress
+    url: https://sarcasticdevops.wordpress.com
   - title: medium
     url: https://medium.com/@jdgoodall1
   #- title: vagrant
   #  url: https://app.vagrantup.com/jdgoodall1
-  - title: wordpress
-    url: https://sarcasticdevops.wordpress.com
     
 # Google webmaster tools
 google_verify: L2VsLI1uLyBPXQKO65ErOx1V5NYRQstKixSdR4HQW60
