@@ -1,0 +1,82 @@
+<!-- Tag Cloud Component -->
+<div class="tag-cloud">
+    <h2 class="h5 mb-3">Tags</h2>
+    
+    {% assign all_tags = site.tags | sort %}
+    
+    {% if all_tags.size > 0 %}
+    <!-- Calculate min and max tag counts for sizing -->
+    {% assign max_count = 0 %}
+    {% assign min_count = 999999 %}
+    {% for tag in all_tags %}
+        {% if tag[1].size > max_count %}
+            {% assign max_count = tag[1].size %}
+        {% endif %}
+        {% if tag[1].size < min_count %}
+            {% assign min_count = tag[1].size %}
+        {% endif %}
+    {% endfor %}
+    
+    <div class="tag-cloud-items">
+        {% for tag in all_tags %}
+            {% assign tag_count = tag[1].size %}
+            {% assign tag_size = tag_count | minus: min_count | times: 100 %}
+            {% if max_count != min_count %}
+                {% assign tag_size = tag_size | divided_by: max_count | minus: min_count %}
+            {% else %}
+                {% assign tag_size = 50 %}
+            {% endif %}
+            {% assign tag_size = tag_size | plus: 75 %}
+            
+            <a href="{{ site.baseurl }}/blog/tags/{{ tag[0] | slugify }}/" 
+               class="tag-cloud-item badge bg-secondary text-decoration-none me-2 mb-2"
+               style="font-size: {{ tag_size }}%;"
+               title="{{ tag[0] }} ({{ tag_count }} post{% if tag_count != 1 %}s{% endif %})">
+                #{{ tag[0] }}
+                <span class="tag-count ms-1">({{ tag_count }})</span>
+            </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="text-muted small">No tags yet.</p>
+    {% endif %}
+</div>
+
+<!-- Custom Styles for Tag Cloud -->
+<style>
+    .tag-cloud {
+        padding: 1.5rem;
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .tag-cloud h2 {
+        color: #1f2937;
+        font-weight: 600;
+    }
+    
+    .tag-cloud-items {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .tag-cloud-item {
+        display: inline-flex;
+        align-items: center;
+        padding: 0.5rem 0.75rem;
+        transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+        white-space: nowrap;
+    }
+    
+    .tag-cloud-item:hover {
+        transform: scale(1.1);
+        background-color: #6c757d !important;
+    }
+    
+    .tag-cloud-item .tag-count {
+        font-size: 0.85em;
+        opacity: 0.8;
+    }
+</style>

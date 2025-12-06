@@ -1,0 +1,22 @@
+<footer class="bg-light py-4 mt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                <p class="mb-0 text-muted">&copy; {{ site.time | date: '%Y' }} {{ site.name }}. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+                <div class="social-links">
+                    {% for network in site.social %}
+                    <a href="{{ network.url }}" class="btn btn-outline-primary btn-sm me-2" target="_blank" rel="noopener noreferrer" aria-label="{{ network.title }}">
+                        {% if network.title == 'dev' %}
+                            <i class="bi bi-code-square"></i>
+                        {% else %}
+                            <i class="bi bi-{{ network.title }}"></i>
+                        {% endif %}
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

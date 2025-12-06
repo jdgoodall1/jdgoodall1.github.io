@@ -1,0 +1,79 @@
+---
+layout: page
+title: About Me
+subtitle: Senior Cloud Engineer specializing in DevOps and AWS
+---
+
+<div class="row">
+    <div class="col-lg-6 mb-4">
+        <p class="lead">
+            I have 8 years of experience in IT, across most of the SDLC - 1 year business & systems analysis, 1 year testing (manual and automation), 3 years release and environment management, 3 years DevOps. However I have found my niche in DevOps and automation.
+        </p>
+        <p>
+            I love automation. If you've had to do a task once, you'll have to do it again. I love being able to take a repetitive, time consuming task and make sure that no-one ever has to look at it again, and with my background in environments management, I'm able to apply this right down to the process level (specifically monitoring and health), with real-time alerting and fault-tolerant scripting.
+        </p>
+        <p>
+            Serverless monitoring is a particularly interesting challenge, because the "traditional" method of using an agent on the server isn't available, so you have to start getting creative. For "true" serverless applications, like AWS Lambda, alerting is simple, but fault finding using CloudWatch Logs can be painful. For container based applications it's even harder though, as unless you're specifically looking for container restart events, they can be easy to miss.
+        </p>
+    </div>
+    <div class="col-lg-6">
+        <h2 class="mb-4">Highlights</h2>
+        <ul class="list-unstyled">
+            <li class="mb-3">
+                <i class="bi bi-award-fill text-primary me-2"></i>
+                <strong>4 X AWS Certified:</strong>
+                <ul class="mt-2">
+                    <li><a href="https://www.credly.com/badges/9cbfd1e2-043c-428b-bb4e-fb3a79c1247b" target="_blank" rel="noopener noreferrer">AWS DevOps Engineer</a></li>
+                    <li><a href="https://www.credly.com/badges/fd13d5f9-9b0f-4de2-b4f8-67c664760116" target="_blank" rel="noopener noreferrer">AWS SysOps Administrator Associate</a></li>
+                    <li><a href="https://www.credly.com/badges/19aa706f-7500-418e-9426-819169457c02/" target="_blank" rel="noopener noreferrer">AWS Developer Associate</a></li>
+                    <li><a href="https://www.credly.com/badges/690ba7a6-1b19-4a17-9938-79bb172242ca/" target="_blank" rel="noopener noreferrer">AWS Cloud Practitioner</a></li>
+                </ul>
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-people-fill text-primary me-2"></i>
+                <a href="https://aws.amazon.com/developer/community/community-builders/community-builders-directory/?cb-cards.sort-by=item.additionalFields.cbName&cb-cards.sort-order=asc&awsf.builder-category=*all&awsf.location=*all&awsf.year=*all&cb-cards.q=jon%2Bgoodall&cb-cards.q_operator=AND" target="_blank" rel="noopener noreferrer">AWS Community Builder (March 2023 intake)</a>
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-geo-alt-fill text-primary me-2"></i>
+                Co-Founded the <a href="https://aws.amazon.com/developer/community/usergroups/?community-user-groups-cards.sort-by=item.additionalFields.ugName&community-user-groups-cards.sort-order=asc&awsf.location=*all&awsf.category=*all&community-user-groups-cards.q=brighton&community-user-groups-cards.q_operator=AND" target="_blank" rel="noopener noreferrer">AWS Brighton User Group</a>
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Consistently rolls out CI/CD processes, including testing and automated deployments to production.
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Implemented a serverless monitoring solution across Heroku and AWS to give near real-time alerting and automated scaling.
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Designed and implemented a hybrid (AWS and on-premises) monitoring solution using the ELK stack, CloudWatch, S3 and Glacier.
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Designed and built custom CMDB (using HTML, CSS, JavaScript, PHP, MySQL, jQuery and the Jira REST interface) to enable developers to allocate their own resources, and provide quick data exports to teams across the business when looking at the server estate. Logins with different levels of permissions was achieved via Jira groups.
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Implemented 1-click deploy to VMWare private cloud servers, across multiple technologies (Windows, SSIS, SSRS, SQL, PowerShell)
+            </li>
+            <li class="mb-3">
+                <i class="bi bi-check-circle-fill text-success me-2"></i>
+                Built out a monitoring solution (using ITRS Geneos) for all development environments, improving stability and reducing time wasted investigating faults.
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="row mt-5">
+    <div class="col-lg-12">
+        <div class="card border-0 shadow-sm" style="background: linear-gradient(135deg, {{ site.colors.primary }} 0%, {{ site.colors.secondary }} 100%);">
+            <div class="card-body text-white text-center p-5">
+                <h2 class="mb-3">Want to learn more?</h2>
+                <p class="lead mb-4">Check out my blog for insights on DevOps, AWS, and cloud infrastructure.</p>
+                <a href="{{ site.baseurl }}/blog" class="btn btn-light btn-lg me-2">Read My Blog</a>
+                <a href="{{ site.baseurl }}/contact" class="btn btn-outline-light btn-lg">Get In Touch</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<section class="blog-listing tag-page py-5">
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="bi bi-tag me-2"></i>
+                    #{{ page.tag }}
+                </h1>
+                <p class="lead text-muted">
+                    Posts tagged with {{ page.tag }}
+                </p>
+                <a href="{{ site.baseurl }}/blog/" class="btn btn-outline-primary">
+                    <i class="bi bi-arrow-left me-2"></i>
+                    Back to All Posts
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="row g-4">
+            {% assign tag_posts = site.tags[page.tag] %}
+            {% if tag_posts %}
+                {% assign tag_posts = tag_posts | sort: 'date' | reverse %}
+            {% else %}
+                {% assign tag_posts = "" | split: "" %}
+            {% endif %}
+            
+            {% if tag_posts.size > 0 %}
+                {% for post in tag_posts %}
+                <div class="col-md-6 col-lg-4">
+                    {% include post-card.html post=post %}
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <i class="bi bi-info-circle me-2"></i>
+                        No posts found with this tag.
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Post Count -->
+        <div class="text-center text-muted mt-5">
+            <small>
+                {{ tag_posts.size }} post{% if tag_posts.size != 1 %}s{% endif %} with this tag
+            </small>
+        </div>
+
+        <!-- Sidebar with Categories and Tags -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                {% include category-list.html %}
+            </div>
+            <div class="col-md-6">
+                {% include tag-cloud.html %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Styles for Tag Page -->
+<style>
+    .tag-page {
+        min-height: 60vh;
+    }
+    
+    .tag-page .display-4 i {
+        color: #7c3aed;
+    }
+</style>
