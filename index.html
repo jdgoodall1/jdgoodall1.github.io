@@ -1,3 +1,310 @@
 ---
 layout: default
+title: Home
 ---
+
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center min-vh-70">
+            <div class="col-lg-10 mx-auto">
+                <div class="row align-items-center">
+                    <!-- Profile Image -->
+                    <div class="col-md-4 text-center mb-4 mb-md-0">
+                        <div class="profile-image-wrapper">
+                            <img src="{{ site.baseurl }}/img/profile.png" 
+                                 alt="{{ site.name }}" 
+                                 class="profile-image img-fluid rounded-circle shadow-lg">
+                        </div>
+                    </div>
+                    
+                    <!-- Hero Content -->
+                    <div class="col-md-8">
+                        <h1 class="display-2 fw-bold mb-4 hero-title">{{ site.name }}</h1>
+                        <p class="lead fs-3 mb-3 hero-subtitle">{{ site.skills }}</p>
+                        <p class="fs-5 mb-4 text-muted hero-description">{{ site.description }}</p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="{{ site.baseurl }}/about" class="btn btn-primary btn-lg px-4 py-3">About Me</a>
+                            <a href="{{ site.baseurl }}/blog" class="btn btn-outline-primary btn-lg px-4 py-3">Blog</a>
+                            <a href="{{ site.baseurl }}/contact" class="btn btn-outline-primary btn-lg px-4 py-3">Contact</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.hero-section {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 50%, #f0f9ff 100%);
+    padding: 5rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(29, 78, 216, 0.05) 0%, transparent 50%),
+        radial-gradient(circle at 80% 80%, rgba(124, 58, 237, 0.05) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.hero-section .container {
+    position: relative;
+    z-index: 1;
+}
+
+.min-vh-70 {
+    min-height: 70vh;
+}
+
+.hero-title {
+    color: #111827;
+    font-size: 4rem;
+    letter-spacing: -0.02em;
+}
+
+.hero-subtitle {
+    color: #1d4ed8;
+    font-weight: 600;
+}
+
+.hero-description {
+    color: #6b7280;
+}
+
+.profile-image-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-image {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border: 6px solid white;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2) !important;
+}
+
+.profile-image-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);
+    opacity: 0.1;
+    z-index: -1;
+}
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .hero-description {
+        text-align: center;
+    }
+    
+    .hero-section {
+        padding: 3rem 0;
+    }
+    
+    .min-vh-70 {
+        min-height: 50vh;
+    }
+    
+    .profile-image {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .d-flex.gap-3 {
+        justify-content: center;
+    }
+}
+</style>
+
+<!-- Skills Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h2 class="display-5 fw-bold">Expertise</h2>
+                <p class="lead text-muted">Technologies and practices I work with</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm expertise-card">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 icon-wrapper">
+                            <i class="bi bi-cloud-fill fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Cloud Infrastructure</h3>
+                        <p class="text-muted mb-0">AWS certified with expertise in serverless, containers, and infrastructure as code using Terraform and CloudFormation.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm expertise-card">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 icon-wrapper secondary">
+                            <i class="bi bi-gear-fill fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">DevOps & Automation</h3>
+                        <p class="text-muted mb-0">CI/CD pipelines, automated deployments, and infrastructure automation using Jenkins, Ansible, and modern DevOps practices.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm expertise-card">
+                    <div class="card-body text-center p-4">
+                        <div class="mb-3 icon-wrapper accent">
+                            <i class="bi bi-graph-up fs-1"></i>
+                        </div>
+                        <h3 class="h5 fw-bold mb-3">Monitoring & Observability</h3>
+                        <p class="text-muted mb-0">Real-time monitoring solutions, alerting systems, and observability for serverless and containerized applications.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Recent Blog Posts Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center mb-5">
+                <h2 class="display-5 fw-bold">Recent Posts</h2>
+                <p class="lead text-muted">Latest thoughts and insights</p>
+            </div>
+        </div>
+        <div class="row g-4">
+            {% for post in site.posts limit:3 %}
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm">
+                    <div class="card-body">
+                        <h3 class="h5 card-title">
+                            <a href="{{ post.url | relative_url }}" class="text-decoration-none text-dark">{{ post.title }}</a>
+                        </h3>
+                        <p class="text-muted small mb-3">
+                            <i class="bi bi-calendar3"></i> {{ post.date | date: "%B %d, %Y" }}
+                        </p>
+                        <p class="card-text">{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+                        <a href="{{ post.url | relative_url }}" class="btn btn-sm btn-outline-primary">Read More</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% if site.posts.size > 0 %}
+        <div class="text-center mt-5">
+            <a href="{{ site.baseurl }}/blog" class="btn btn-primary btn-lg">View All Posts</a>
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 cta-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h2 class="display-5 fw-bold mb-4">Let's Work Together</h2>
+                <p class="lead mb-4">Interested in discussing cloud infrastructure, DevOps practices, or potential collaboration?</p>
+                <a href="{{ site.baseurl }}/contact" class="btn btn-primary btn-lg px-5 py-3">Contact Me</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.expertise-card {
+    transition: all 0.3s ease;
+    border: 1px solid #e5e7eb;
+}
+
+.expertise-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1) !important;
+}
+
+.icon-wrapper {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+}
+
+.icon-wrapper i {
+    color: #1d4ed8;
+}
+
+.icon-wrapper.secondary {
+    background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+}
+
+.icon-wrapper.secondary i {
+    color: #7c3aed;
+}
+
+.icon-wrapper.accent {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.icon-wrapper.accent i {
+    color: #d97706;
+}
+
+.cta-section {
+    background: linear-gradient(135deg, #1d4ed8 0%, #7c3aed 100%);
+    color: white;
+}
+
+.cta-section h2,
+.cta-section p {
+    color: white;
+}
+
+.cta-section .btn-primary {
+    background-color: white;
+    border-color: white;
+    color: #1d4ed8;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.cta-section .btn-primary:hover {
+    background-color: #f0f9ff;
+    border-color: #f0f9ff;
+    color: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+</style>

@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<section class="blog-listing category-page py-5">
+    <div class="container">
+        <!-- Page Header -->
+        <div class="row mb-5">
+            <div class="col-lg-10 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-3">
+                    <i class="bi bi-folder me-2"></i>
+                    {{ page.category }}
+                </h1>
+                <p class="lead text-muted">
+                    Posts in the {{ page.category }} category
+                </p>
+                <a href="{{ site.baseurl }}/blog/" class="btn btn-outline-primary">
+                    <i class="bi bi-arrow-left me-2"></i>
+                    Back to All Posts
+                </a>
+            </div>
+        </div>
+
+        <!-- Blog Posts Grid -->
+        <div class="row g-4">
+            {% assign category_posts = site.categories[page.category] %}
+            {% if category_posts %}
+                {% assign category_posts = category_posts | sort: 'date' | reverse %}
+            {% else %}
+                {% assign category_posts = "" | split: "" %}
+            {% endif %}
+            
+            {% if category_posts.size > 0 %}
+                {% for post in category_posts %}
+                <div class="col-md-6 col-lg-4">
+                    {% include post-card.html post=post %}
+                </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12">
+                    <div class="alert alert-info text-center" role="alert">
+                        <i class="bi bi-info-circle me-2"></i>
+                        No posts found in this category.
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+
+        <!-- Post Count -->
+        <div class="text-center text-muted mt-5">
+            <small>
+                {{ category_posts.size }} post{% if category_posts.size != 1 %}s{% endif %} in this category
+            </small>
+        </div>
+
+        <!-- Sidebar with Categories and Tags -->
+        <div class="row mt-5">
+            <div class="col-md-6">
+                {% include category-list.html %}
+            </div>
+            <div class="col-md-6">
+                {% include tag-cloud.html %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Custom Styles for Category Page -->
+<style>
+    .category-page {
+        min-height: 60vh;
+    }
+    
+    .category-page .display-4 i {
+        color: #2563eb;
+    }
+</style>

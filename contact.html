@@ -1,0 +1,107 @@
+---
+layout: page
+title: Contact Me
+subtitle: Let's connect and discuss your project or ideas
+---
+
+<div class="row">
+    <div class="col-lg-8 mx-auto">
+        <div class="card border-0 shadow-sm">
+            <div class="card-body p-4 p-md-5">
+                <p class="lead text-center mb-4">
+                    Have a question or want to work together? Fill out the form below and I'll get back to you as soon as possible.
+                </p>
+                
+                <form action="//formspree.io/{{ site.email }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+                    <div class="mb-4">
+                        <label for="name" class="form-label">Name <span class="text-danger">*</span></label>
+                        <input type="text" name="name" class="form-control form-control-lg" placeholder="Your Name" id="name" required>
+                        <div class="invalid-feedback">
+                            Please enter your name.
+                        </div>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="form-label">Email Address <span class="text-danger">*</span></label>
+                        <input type="email" name="_replyto" class="form-control form-control-lg" placeholder="your.email@example.com" id="email" required>
+                        <div class="invalid-feedback">
+                            Please enter a valid email address.
+                        </div>
+                    </div>
+                    
+                    <!-- Hidden fields for Formspree -->
+                    <input type="hidden" name="_subject" value="New submission from {{ site.title }} website">
+                    <input type="text" name="_gotcha" style="display:none">
+                    
+                    <div class="mb-4">
+                        <label for="message" class="form-label">Message <span class="text-danger">*</span></label>
+                        <textarea rows="6" name="message" class="form-control form-control-lg" placeholder="Your message..." id="message" required></textarea>
+                        <div class="invalid-feedback">
+                            Please enter a message.
+                        </div>
+                    </div>
+                    
+                    <div id="success" class="alert alert-success d-none" role="alert">
+                        <i class="bi bi-check-circle-fill me-2"></i>
+                        Your message has been sent successfully!
+                    </div>
+                    
+                    <div id="error" class="alert alert-danger d-none" role="alert">
+                        <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                        There was an error sending your message. Please try again.
+                    </div>
+                    
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">
+                            <i class="bi bi-send-fill me-2"></i>Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <div class="row mt-5">
+            <div class="col-md-4 text-center mb-4">
+                <div class="p-3">
+                    <i class="bi bi-envelope-fill fs-1 mb-3 d-block" style="color: {{ site.colors.primary }};"></i>
+                    <p class="h6 fw-bold mb-2">Email</p>
+                    <a href="mailto:{{ site.email }}" class="text-decoration-none">{{ site.email }}</a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="p-3">
+                    <i class="bi bi-linkedin fs-1 mb-3 d-block" style="color: {{ site.colors.primary }};"></i>
+                    <p class="h6 fw-bold mb-2">LinkedIn</p>
+                    <a href="https://www.linkedin.com/in/jdgoodall1/" target="_blank" rel="noopener noreferrer" class="text-decoration-none">Connect with me</a>
+                </div>
+            </div>
+            <div class="col-md-4 text-center mb-4">
+                <div class="p-3">
+                    <i class="bi bi-github fs-1 mb-3 d-block" style="color: {{ site.colors.primary }};"></i>
+                    <p class="h6 fw-bold mb-2">GitHub</p>
+                    <a href="https://github.com/jdgoodall1" target="_blank" rel="noopener noreferrer" class="text-decoration-none">View my projects</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// Form validation
+(function() {
+    'use strict';
+    
+    const form = document.getElementById('contactForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(event) {
+            if (!form.checkValidity()) {
+                event.preventDefault();
+                event.stopPropagation();
+            }
+            
+            form.classList.add('was-validated');
+        }, false);
+    }
+})();
+</script>

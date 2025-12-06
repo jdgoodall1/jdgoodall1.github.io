@@ -1,45 +1,119 @@
 # Site settings
+title: Jon Goodall
 name: Jon Goodall
 email: jongoodall14@gmail.com
-#canonical_url: https://jdgoodall1.github.io
+description: Principal Cloud Engineer specializing in DevOps and AWS
 keywords: "DevOps, Agile, Terraform, Ansible, Hashicorp, Vault, AWS, Jenkins, Cloudformation, AWS Certified, Cloud"
-skills: "Senior Cloud Engineer in Sussex"
-baseurl: 
+skills: "Principal Cloud Engineer in Sussex"
+baseurl: ""
+url: "https://jdgoodall1.github.io"
 
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
-# You should replace these with your social networks, of course. :)
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
+
+# Pagination
+paginate: 10
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:year/:month/:day/:title/
+
+# Plugins (GitHub Pages whitelist)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .git/
+  - .gitignore
+  - README.md
+  - VALIDATION_SUMMARY.md  # Documentation file, not for site rendering
+  - _templates/  # Template files for reference, not for rendering
+
+# Social networks
 social:
   - title: linkedin
     url: https://www.linkedin.com/in/jdgoodall1/
   - title: github
     url: https://github.com/jdgoodall1
-  # - title: dev
-  #   url: https://dev.to/jdgoodall1
-  - title: wordpress
-    url: https://sarcasticdevops.wordpress.com
   - title: medium
     url: https://medium.com/@jdgoodall1
-  #- title: vagrant
-  #  url: https://app.vagrantup.com/jdgoodall1
-    
-# Google webmaster tools
-google_verify: L2VsLI1uLyBPXQKO65ErOx1V5NYRQstKixSdR4HQW60
+  - title: dev
+    url: https://dev.to/jdgoodall1
+  - title: wordpress
+    url: https://sarcasticdevops.wordpress.com
 
-# https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
+# SEO
+google_verify: L2VsLI1uLyBPXQKO65ErOx1V5NYRQstKixSdR4HQW60
 bing_verify: 86AD1A2F130F4DC2271E097B4D65EBBF
 
-# Color settings (hex-codes without the leading hash-tag)
+# Jekyll SEO Tag configuration
+author:
+  name: Jon Goodall
+  email: jongoodall14@gmail.com
+  twitter: jdgoodall1
+
+twitter:
+  username: jdgoodall1
+  card: summary
+
+logo: /img/aws.png
+
+# Social profiles for structured data
+social_links:
+  - https://www.linkedin.com/in/jdgoodall1/
+  - https://github.com/jdgoodall1
+  - https://medium.com/@jdgoodall1
+
+# Jekyll Feed configuration
+feed:
+  path: feed.xml
+  excerpt_only: false
+  
+# Jekyll Sitemap configuration
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /img/aws.png
+
+# Color scheme
+colors:
+  primary: "#1d4ed8"      # Darker Blue (better contrast)
+  primary-rgb: "29, 78, 216"
+  primary-hover: "#1e40af"
+  secondary: "#7c3aed"    # Purple
+  secondary-dark: "#6d28d9"
+  accent: "#f59e0b"       # Amber
+  text: "#111827"         # Darker gray (better contrast)
+  text-muted: "#6b7280"   # Muted text
+  background: "#ffffff"   # White
+  light: "#f9fafb"        # Lighter gray
+  border: "#e5e7eb"       # Border color
+  success: "#10b981"      # Green
+  warning: "#f59e0b"      # Amber
+  error: "#ef4444"        # Red
+  info: "#3b82f6"         # Blue
+
+# Legacy color settings (for backward compatibility during migration)
 color:
-  primary: 2196F3
-  primary-rgb: "33, 150, 243"
-  secondary: 285172
-  secondary-dark: 29455b
-  section-tout: eaf1f1
-
-
-
-# Build settings
-markdown: kramdown
-permalink: pretty
-
-theme: jekyll-theme-slate
+  primary: 1d4ed8
+  primary-rgb: "29, 78, 216"
+  secondary: 7c3aed
+  secondary-dark: 6d28d9
+  section-tout: f9fafb

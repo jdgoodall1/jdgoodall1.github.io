@@ -1,0 +1,58 @@
+<!-- Category List Component -->
+<div class="category-list">
+    <h2 class="h5 mb-3">Categories</h2>
+    
+    {% assign all_categories = site.categories | sort %}
+    
+    {% if all_categories.size > 0 %}
+    <ul class="list-unstyled">
+        {% for category in all_categories %}
+        <li class="mb-2">
+            <a href="{{ site.baseurl }}/blog/categories/{{ category[0] | slugify }}/" class="d-flex justify-content-between align-items-center text-decoration-none">
+                <span class="category-name">
+                    <i class="bi bi-folder me-2"></i>
+                    {{ category[0] }}
+                </span>
+                <span class="badge bg-primary rounded-pill">{{ category[1].size }}</span>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p class="text-muted small">No categories yet.</p>
+    {% endif %}
+</div>
+
+<!-- Custom Styles for Category List -->
+<style>
+    .category-list {
+        padding: 1.5rem;
+        background-color: #f8f9fa;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .category-list h2 {
+        color: #1f2937;
+        font-weight: 600;
+    }
+    
+    .category-list a {
+        color: #1f2937;
+        padding: 0.5rem;
+        border-radius: 0.25rem;
+        transition: background-color 0.2s ease-in-out;
+    }
+    
+    .category-list a:hover {
+        background-color: #e9ecef;
+    }
+    
+    .category-list .category-name {
+        font-weight: 500;
+    }
+    
+    .category-list .badge {
+        font-size: 0.75rem;
+    }
+</style>
