@@ -62,7 +62,7 @@ The AI didn't just conjure a perfect website. It took iteration, feedback, and c
 
 **2. It's Still My Site (Sort Of)**
 
-The decisions are mine in the sense that I said "yes" or "no" to things. The content will be mine (when I actually write it). But let's not pretend I "architected" this - I just pointed at things and said "make it work" or "that's ugly".
+The decisions are mine in the sense that I said "yes" or "no" to things. The content is be mine (apart from most of this post, guess which bits I did for bonus points). But let's not pretend I "architected" this - I just pointed at things and said "make it work" or "that's ugly".
 
 **3. It Reveals What Actually Matters**
 
@@ -105,7 +105,6 @@ The real question isn't "Is this AI slop?" It's "Does this add value?"
 For me, the answer is yes:
 - I have a professional online presence
 - I can share technical content about DevOps and cloud engineering
-- I learned about Jekyll, GitHub Pages, and modern web practices
 - I can maintain and update it myself
 
 For you, the reader, hopefully it's also yes:
@@ -134,13 +133,13 @@ rake serve             # Runs Jekyll with live reload
 git push origin main   # GitHub Pages handles the rest
 ```
 
-The entire modernization took a few hours of back-and-forth with the AI, versus what would have been days or weeks of learning and coding.
+The entire modernization took a few hours of back-and-forth with the AI, versus what would have been weeks of learning and coding.
 
 ## What I Actually Learned
 
 Let's be real: not much. I didn't suddenly become a Jekyll expert or learn Bootstrap 5. I mostly just said "this looks crap" or "the blog isn't showing posts" and let the AI figure it out.
 
-Could I maintain this? Probably not without AI assistance. Could I modify it? Maybe simple stuff. Did I learn the deep internals of Jekyll templating? Absolutely not.
+Could I maintain this? Eh, kinda. Could I modify it? Maybe simple stuff. Did I learn the deep internals of Jekyll templating? Absolutely not.
 
 And that's fine. That was never the goal.
 
@@ -175,4 +174,4 @@ Is it slop? You decide.
 
 **Update**: If you want to see the actual code and process, it's all public on [GitHub](https://github.com/jdgoodall1/jdgoodall1.github.io). The README is transparent about how it was built, and you can see every commit.
 
-**Another Update**: The irony of using AI to write a blog post about using AI to build a blog is not lost on me.
+**Another Update**: The irony of using AI to write a blog post about using AI to build a blog is not lost on me - or Claude actually, it wrote that joke.
