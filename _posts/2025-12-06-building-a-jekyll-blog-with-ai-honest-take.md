@@ -62,7 +62,7 @@ The AI didn't just conjure a perfect website. It took iteration, feedback, and c
 
 **2. It's Still My Site (Sort Of)**
 
-The decisions are mine in the sense that I said "yes" or "no" to things. The content is be mine (apart from most of this blog, guess which bits I did for bonus points). But let's not pretend I "architected" this - I just pointed at things and said "make it work" or "that's ugly".
+The decisions are mine in the sense that I said "yes" or "no" to things. The content is be mine (apart from most of this post, guess which bits I did for bonus points). But let's not pretend I "architected" this - I just pointed at things and said "make it work" or "that's ugly".
 
 **3. It Reveals What Actually Matters**
 
