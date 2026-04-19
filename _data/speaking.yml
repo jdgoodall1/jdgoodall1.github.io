@@ -1,0 +1,21 @@
+# Add your talks here. Most recent first.
+# - title: "Talk Title"
+#   event: "Event Name"
+#   date: 2026-01-15
+#   location: "City, Country"
+#   description: "Brief description"
+#   slides_url: "https://..."  (optional)
+#   video_url: "https://..."   (optional)
+
+- title: "Building a Serverless Podcast Workflow: Adventures with AI"
+  event: "AWS User Group UK"
+  date: 2025-06-04
+  location: "London, UK"
+  description: "A practical example of using AI & Serverless to achieve a business outcome related to the automation of content creation. Covers serverless tools for multi-step workflows and actionable tips & tricks on using Amazon Bedrock."
+  video_url: "https://www.youtube.com/watch?v=PQLmaEX3GmY"
+
+- title: "Keeping On-Call Human: Serverless Slack Out-of-Hours Alerts"
+  event: "AWS Summit London"
+  date: 2026-04-22
+  location: "London, UK"
+  description: "A serverless system monitoring customer Slack channels out-of-hours, sending low-severity alerts to on-call engineers to reduce wake-ups while maintaining visibility. Covers AWS architecture (API Gateway, Lambda, SQS, DynamoDB TTL, SNS) and reliability patterns including signature validation, idempotency, deduplication, DLQs, retries, and CloudWatch observability."

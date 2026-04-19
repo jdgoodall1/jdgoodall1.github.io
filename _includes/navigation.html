@@ -18,6 +18,9 @@
                     <a class="nav-link{% if page.url contains '/blog' %} active{% endif %}" {% if page.url contains '/blog' %}aria-current="page"{% endif %} href="{{ site.baseurl }}/blog">Blog</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link{% if page.url == '/speaking.html' or page.url == '/speaking/' %} active{% endif %}" {% if page.url == '/speaking.html' or page.url == '/speaking/' %}aria-current="page"{% endif %} href="{{ site.baseurl }}/speaking">Speaking</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link{% if page.url == '/contact.html' or page.url == '/contact/' %} active{% endif %}" {% if page.url == '/contact.html' or page.url == '/contact/' %}aria-current="page"{% endif %} href="{{ site.baseurl }}/contact">Contact</a>
                 </li>
             </ul>
