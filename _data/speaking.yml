@@ -7,15 +7,50 @@
 #   slides_url: "https://..."  (optional)
 #   video_url: "https://..."   (optional)
 
+- title: "WTF Is Serverless"
+  event: "Brighton Cloud"
+  date: 2023-09-20
+  location: "Brighton, UK"
+  description: "An overview of what 'serverless' is and isn't, specifically on AWS."
+  video_url: "https://www.youtube.com/watch?v=38ewdH0jR1g"
+
+- title: "Making AWS Organizations Not Suck"
+  event: "AWS Brighton User Group"
+  date: 2024-05-23
+  location: "Brighton, UK"
+  description: "Practical strategies for optimising AWS Organizations — Landing Zones, Control Tower, Org-Formation, and a custom LogiZone layout."
+  video_url: "https://www.youtube.com/watch?v=oK1jeIGUIQg"
+
 - title: "Building a Serverless Podcast Workflow: Adventures with AI"
-  event: "AWS User Group UK"
+  event: "AWS User Group UK Meetup #71"
   date: 2025-06-04
   location: "London, UK"
   description: "A practical example of using AI & Serverless to achieve a business outcome related to the automation of content creation. Covers serverless tools for multi-step workflows and actionable tips & tricks on using Amazon Bedrock."
   video_url: "https://www.youtube.com/watch?v=PQLmaEX3GmY"
 
-- title: "Keeping On-Call Human: Serverless Slack Out-of-Hours Alerts"
+- title: "Building a Serverless Podcast Workflow: Adventures with AI"
+  event: "AWS North Community Conference"
+  date: 2025-10-16
+  location: "Newcastle, UK"
+  description: "A practical example of using AI & Serverless to achieve a business outcome related to the automation of content creation. Covers serverless tools for multi-step workflows and actionable tips & tricks on using Amazon Bedrock."
+
+- title: "Building a Serverless Podcast Workflow: Adventures with AI"
+  event: "AWS Summit London"
+  date: 2025-04-30
+  location: "London, UK"
+  session_code: "COM301"
+  description: "A practical example of using AI & Serverless to achieve a business outcome related to the automation of content creation. Covers serverless tools for multi-step workflows and actionable tips & tricks on using Amazon Bedrock."
+
+- title: "Keeping On-Call Human: AWS Serverless Slack After-Hours Alerts"
   event: "AWS Summit London"
   date: 2026-04-22
   location: "London, UK"
-  description: "A serverless system monitoring customer Slack channels out-of-hours, sending low-severity alerts to on-call engineers to reduce wake-ups while maintaining visibility. Covers AWS architecture (API Gateway, Lambda, SQS, DynamoDB TTL, SNS) and reliability patterns including signature validation, idempotency, deduplication, DLQs, retries, and CloudWatch observability."
+  description: "A serverless system monitoring customer Slack channels out-of-hours (5:30pm-8:00am), sending low-severity alerts to on-call engineers to reduce wake-ups while maintaining visibility. Covers AWS architecture (API Gateway, Lambda, SQS, DynamoDB TTL, SNS) and reliability patterns: signature validation, idempotency, deduplication, DLQs, retries, and CloudWatch observability. A reusable blueprint for smarter, human-friendly alerting."
+  video_url: "https://www.youtube.com/watch?v=6FY8_qOttzw"
+
+- title: "re:Invent 2025 Recap"
+  event: "AWS Brighton User Group Meetup #12"
+  date: 2026-01-22
+  location: "Brighton, UK"
+  description: "A recap of the key announcements and highlights from AWS re:Invent 2025."
+  video_url: "https://www.youtube.com/watch?v=O-KEB_tz_kE"

@@ -16,11 +16,14 @@ permalink: /speaking/
         </div>
 
         <div class="row g-4">
-            {% for talk in site.data.speaking %}
+            {% assign sorted_talks = site.talks | sort: 'date' | reverse %}
+            {% for talk in sorted_talks %}
             <div class="col-md-6 col-lg-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title fw-bold">{{ talk.title }}</h5>
+                        <h5 class="card-title fw-bold">
+                            <a href="{{ talk.url | prepend: site.baseurl }}" class="text-decoration-none">{{ talk.title }}</a>
+                        </h5>
                         <p class="text-muted mb-2">
                             <i class="fa fa-calendar"></i> {{ talk.date | date: "%B %Y" }}
                             {% if talk.location %}<br><i class="fa fa-map-marker"></i> {{ talk.location }}{% endif %}
@@ -28,12 +31,11 @@ permalink: /speaking/
                         <p class="card-text"><strong>{{ talk.event }}</strong></p>
                         {% if talk.description %}<p class="card-text">{{ talk.description }}</p>{% endif %}
                     </div>
-                    {% if talk.slides_url or talk.video_url %}
                     <div class="card-footer bg-transparent">
-                        {% if talk.slides_url %}<a href="{{ talk.slides_url }}" class="btn btn-sm btn-outline-primary me-2">Slides</a>{% endif %}
-                        {% if talk.video_url %}<a href="{{ talk.video_url }}" class="btn btn-sm btn-outline-primary">Video</a>{% endif %}
+                        <a href="{{ talk.url | prepend: site.baseurl }}" class="btn btn-sm btn-outline-primary me-2">Details</a>
+                        {% if talk.slides_url %}<a href="{{ talk.slides_url }}" class="btn btn-sm btn-outline-secondary me-2">Slides</a>{% endif %}
+                        {% if talk.video_url %}<a href="{{ talk.video_url }}" class="btn btn-sm btn-outline-secondary">Video</a>{% endif %}
                     </div>
-                    {% endif %}
                 </div>
             </div>
             {% endfor %}

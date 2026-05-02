@@ -59,6 +59,7 @@ GEM
       logger
     faraday-net_http (3.4.2)
       net-http (~> 0.5)
+    ffi (1.17.2)
     ffi (1.17.2-x64-mingw-ucrt)
     fiber-annotation (0.2.0)
     fiber-local (1.1.0)
@@ -258,6 +259,7 @@ GEM
     logger (1.7.0)
     mercenary (0.3.6)
     metrics (0.15.0)
+    mini_portile2 (2.8.9)
     minima (2.5.1)
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
@@ -265,6 +267,9 @@ GEM
     minitest (5.26.2)
     net-http (0.8.0)
       uri (>= 0.11.1)
+    nokogiri (1.18.10)
+      mini_portile2 (~> 2.8.2)
+      racc (~> 1.4)
     nokogiri (1.18.10-x64-mingw-ucrt)
       racc (~> 1.4)
     octokit (4.25.1)
@@ -329,6 +334,8 @@ GEM
     zeitwerk (2.7.3)
 
 PLATFORMS
+  arm64-darwin
+  arm64-darwin-25
   x64-mingw-ucrt
 
 DEPENDENCIES

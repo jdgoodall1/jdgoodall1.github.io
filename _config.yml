@@ -22,6 +22,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:year/:month/:day/:title/
+  talks:
+    output: true
+    permalink: /speaking/:slug/
 
 # Plugins (GitHub Pages whitelist)
 plugins:

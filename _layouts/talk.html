@@ -1,0 +1,45 @@
+---
+layout: default
+---
+
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                <!-- Back link -->
+                <a href="{{ site.baseurl }}/speaking/" class="text-decoration-none mb-4 d-inline-block">
+                    <i class="fa fa-arrow-left me-2"></i>All Talks
+                </a>
+
+                <h1 class="display-5 fw-bold mb-3">{{ page.title }}</h1>
+
+                <div class="text-muted mb-4">
+                    <i class="fa fa-calendar me-2"></i>{{ page.date | date: "%B %d, %Y" }}
+                    {% if page.event %}<span class="mx-2">·</span><strong>{{ page.event }}</strong>{% endif %}
+                    {% if page.location %}<span class="mx-2">·</span><i class="fa fa-map-marker me-1"></i>{{ page.location }}{% endif %}
+                </div>
+
+                {% if page.video_url %}
+                <div class="ratio ratio-16x9 mb-4 shadow-sm rounded overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/{{ page.video_url | split: 'v=' | last | split: '&' | first }}" title="{{ page.title }}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+                {% endif %}
+
+                <div class="talk-content fs-5">
+                    {{ content }}
+                </div>
+
+                {% if page.slides_url or page.linkedin_url %}
+                <div class="mt-4">
+                    {% if page.slides_url %}<a href="{{ page.slides_url }}" class="btn btn-outline-primary me-2">
+                        <i class="fa fa-file-powerpoint-o me-2"></i>Slides
+                    </a>{% endif %}
+                    {% if page.linkedin_url %}<a href="{{ page.linkedin_url }}" class="btn btn-outline-primary">
+                        <i class="fa fa-linkedin me-2"></i>LinkedIn Post
+                    </a>{% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
