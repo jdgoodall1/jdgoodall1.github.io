@@ -7,6 +7,13 @@
 #   slides_url: "https://..."  (optional)
 #   video_url: "https://..."   (optional)
 
+- title: "AWS Summit 2023 Recap"
+  event: "Brighton Cloud"
+  date: 2023-06-21
+  location: "Brighton, UK"
+  description: "AWS Summit 2023 summary co-presented with Karl Robinson."
+  video_url: "https://www.youtube.com/watch?v=RC1jjFF1CLM"
+
 - title: "WTF Is Serverless"
   event: "Brighton Cloud"
   date: 2023-09-20
@@ -54,3 +61,15 @@
   location: "Brighton, UK"
   description: "A recap of the key announcements and highlights from AWS re:Invent 2025."
   video_url: "https://www.youtube.com/watch?v=O-KEB_tz_kE"
+
+- title: "Championing AWS and Karate: Jon Goodall"
+  event: "We Chat Tech Podcast"
+  date: 2026-01-19
+  description: "Podcast episode covering the journey to principal cloud engineer, community engagement, AI in development, and balancing tech with karate."
+  video_url: "https://www.youtube.com/watch?v=WutHrnXv4Ag"
+
+- title: "Cracking the Cloud Code: A Guide to AWS Certification Success"
+  event: "TEK-UP Panel"
+  date: 2025-07-08
+  description: "Panel discussion sharing insider tips, study strategies, and career guidance for anyone pursuing AWS certifications."
+  video_url: "https://www.youtube.com/watch?v=Q44wWfHlVPw"
