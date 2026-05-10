@@ -22,15 +22,34 @@ permalink: /podcasts/
                     <div class="card-body">
                         <h2 class="fw-bold mb-2">LogiCast AWS News</h2>
                         <p class="text-muted mb-3">Weekly AWS news and discussion, co-hosted with Karl Robinson.</p>
-                        <p class="mb-4">
-                            <a href="https://logicast.podbean.com/" class="btn btn-outline-primary me-2" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-podcast me-1"></i> Podbean
-                            </a>
-                            <a href="https://logicastvideo.podbean.com/" class="btn btn-outline-secondary" target="_blank" rel="noopener noreferrer">
-                                <i class="fa fa-video-camera me-1"></i> Video Version
-                            </a>
-                        </p>
-                        <iframe title="LogiCast AWS News" allowtransparency="true" height="185" width="100%" style="border: none; min-width: min(100%, 430px);height:185px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=qjbrj-ecac1e-pbblog-playlist&pbad=0&share=1&download=1&rtl=0&fonts=Verdana&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=1&filter=publish_time&publish_start=&publish_end=&ss=42605300bd74c9832f238b53e02c9c6e&btn-skin=ff6d00&size=185" loading="lazy" allowfullscreen=""></iframe>
+
+                        <!-- Tabs -->
+                        <ul class="nav nav-tabs mb-4" id="logicastTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="audio-tab" data-bs-toggle="tab" data-bs-target="#audio-pane" type="button" role="tab" aria-controls="audio-pane" aria-selected="true">
+                                    <i class="fa fa-headphones me-1"></i> Audio
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="video-tab" data-bs-toggle="tab" data-bs-target="#video-pane" type="button" role="tab" aria-controls="video-pane" aria-selected="false">
+                                    <i class="fa fa-video-camera me-1"></i> Video
+                                </button>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content" id="logicastTabContent">
+                            <div class="tab-pane fade show active" id="audio-pane" role="tabpanel" aria-labelledby="audio-tab">
+                                <iframe title="LogiCast AWS News (Audio)" allowtransparency="true" height="185" width="100%" style="border: none; min-width: min(100%, 430px);height:185px;" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=qjbrj-ecac1e-pbblog-playlist&pbad=0&share=1&download=1&rtl=0&fonts=Verdana&skin=1&font-color=auto&logo_link=episode_page&order=episodic&limit=1&filter=publish_time&publish_start=&publish_end=&ss=42605300bd74c9832f238b53e02c9c6e&btn-skin=ff6d00&size=185" loading="lazy" allowfullscreen=""></iframe>
+                                <p class="mt-3"><a href="https://logicast.podbean.com/" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer"><i class="fa fa-podcast me-1"></i> All Episodes on Podbean</a></p>
+                            </div>
+                            <div class="tab-pane fade" id="video-pane" role="tabpanel" aria-labelledby="video-tab">
+                                <div class="ratio ratio-16x9">
+                                    <iframe src="https://www.youtube.com/embed/videoseries?list=PLIXpWCwsxiGGZvC6WUmp7KOXYioWt1MlO" title="LogiCast AWS News (Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                                <p class="mt-3"><a href="https://logicastvideo.podbean.com/" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer"><i class="fa fa-video-camera me-1"></i> All Episodes on Podbean</a></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -41,19 +60,37 @@ permalink: /podcasts/
             <div class="col-lg-10 mx-auto">
                 <h2 class="fw-bold mb-4">Guest Appearances</h2>
                 <div class="card shadow-sm mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">We Chat Tech Podcast</h5>
-                        <p class="text-muted mb-2">"Championing AWS and Karate" — January 2026</p>
-                        <p class="card-text">Journey to principal cloud engineer, community engagement, AI in development, and balancing tech with karate.</p>
-                        <a href="{{ site.baseurl }}/speaking/we-chat-tech-podcast/" class="btn btn-sm btn-outline-primary">Watch Episode</a>
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://www.youtube.com/watch?v=WutHrnXv4Ag" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.youtube.com/vi/WutHrnXv4Ag/mqdefault.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="We Chat Tech Podcast">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">We Chat Tech Podcast</h5>
+                                <p class="text-muted mb-2">"Championing AWS and Karate" — January 2026</p>
+                                <p class="card-text">Journey to principal cloud engineer, community engagement, AI in development, and balancing tech with karate.</p>
+                                <a href="https://www.youtube.com/watch?v=WutHrnXv4Ag" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Watch Episode</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="card shadow-sm mb-3">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold">Cracking the Cloud Code</h5>
-                        <p class="text-muted mb-2">TEK-UP Panel — July 2025</p>
-                        <p class="card-text">Panel discussion on AWS certification tips, study strategies, and career guidance.</p>
-                        <a href="{{ site.baseurl }}/speaking/cracking-the-cloud-code/" class="btn btn-sm btn-outline-primary">Watch Episode</a>
+                    <div class="row g-0">
+                        <div class="col-md-4">
+                            <a href="https://www.youtube.com/watch?v=Q44wWfHlVPw" target="_blank" rel="noopener noreferrer">
+                                <img src="https://img.youtube.com/vi/Q44wWfHlVPw/mqdefault.jpg" class="img-fluid rounded-start h-100 object-fit-cover" alt="Cracking the Cloud Code">
+                            </a>
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title fw-bold">Cracking the Cloud Code</h5>
+                                <p class="text-muted mb-2">TEK-UP Panel — July 2025</p>
+                                <p class="card-text">Panel discussion on AWS certification tips, study strategies, and career guidance.</p>
+                                <a href="https://www.youtube.com/watch?v=Q44wWfHlVPw" class="btn btn-sm btn-outline-primary" target="_blank" rel="noopener noreferrer">Watch Episode</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
