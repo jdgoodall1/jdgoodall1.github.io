@@ -39,7 +39,7 @@ RSpec.describe "SEO and Feeds Configuration" do
       sitemap = File.read('_site/sitemap.xml')
       
       expect(sitemap).to include('<urlset')
-      expect(sitemap).to include('https://jdgoodall1.github.io/')
+      expect(sitemap).to include('https://jongoodall.co.uk/')
       expect(sitemap).to include('/about/')
       expect(sitemap).to include('/blog/')
       expect(sitemap).to include('/contact/')
