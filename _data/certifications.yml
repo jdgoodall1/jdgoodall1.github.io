@@ -1,0 +1,21 @@
+# AWS Certifications. Order determines display order.
+# - name: "Certification Name"
+#   url: "https://www.credly.com/badges/..."
+
+- name: "Solutions Architect Professional"
+  url: "https://www.credly.com/badges/7246d1c5-3fed-475c-8ef8-7ff32f4e1bab/"
+
+- name: "DevOps Engineer Professional"
+  url: "https://www.credly.com/badges/9cbfd1e2-043c-428b-bb4e-fb3a79c1247b"
+
+- name: "Solutions Architect Associate"
+  url: "https://www.credly.com/badges/84f04474-d3b7-44ed-987a-bc544117af96"
+
+- name: "SysOps Administrator Associate"
+  url: "https://www.credly.com/badges/fd13d5f9-9b0f-4de2-b4f8-67c664760116/"
+
+- name: "Developer Associate"
+  url: "https://www.credly.com/badges/84963023-ae76-4057-b8b0-c867538b565c/"
+
+- name: "Cloud Practitioner"
+  url: "https://www.credly.com/badges/23067b2a-cee7-4bb5-b65d-6ee3958b74ee/"

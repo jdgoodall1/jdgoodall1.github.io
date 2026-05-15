@@ -155,39 +155,19 @@ title: Home
             </div>
         </div>
         <div class="row g-4">
+            {% for item in site.data.expertise %}
             <div class="col-md-4">
                 <div class="card h-100 border-0 shadow-sm expertise-card">
                     <div class="card-body text-center p-4">
-                        <div class="mb-3 icon-wrapper">
-                            <i class="bi bi-cloud-fill fs-1"></i>
+                        <div class="mb-3 icon-wrapper {% if item.style == 'secondary' %}secondary{% elsif item.style == 'accent' %}accent{% endif %}">
+                            <i class="bi {{ item.icon }} fs-1"></i>
                         </div>
-                        <h3 class="h5 fw-bold mb-3">Cloud Infrastructure</h3>
-                        <p class="text-muted mb-0">AWS certified with expertise in serverless, containers, and infrastructure as code using Terraform and CloudFormation.</p>
+                        <h3 class="h5 fw-bold mb-3">{{ item.title }}</h3>
+                        <p class="text-muted mb-0">{{ item.description }}</p>
                     </div>
                 </div>
             </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm expertise-card">
-                    <div class="card-body text-center p-4">
-                        <div class="mb-3 icon-wrapper secondary">
-                            <i class="bi bi-gear-fill fs-1"></i>
-                        </div>
-                        <h3 class="h5 fw-bold mb-3">DevOps & Automation</h3>
-                        <p class="text-muted mb-0">CI/CD pipelines, automated deployments, and infrastructure automation using Jenkins, Ansible, and modern DevOps practices.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card h-100 border-0 shadow-sm expertise-card">
-                    <div class="card-body text-center p-4">
-                        <div class="mb-3 icon-wrapper accent">
-                            <i class="bi bi-graph-up fs-1"></i>
-                        </div>
-                        <h3 class="h5 fw-bold mb-3">Monitoring & Observability</h3>
-                        <p class="text-muted mb-0">Real-time monitoring solutions, alerting systems, and observability for serverless and containerized applications.</p>
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
 </section>

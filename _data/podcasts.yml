@@ -1,0 +1,24 @@
+# Guest podcast appearances. Most recent first.
+# - title: "Podcast Name"
+#   episode: "Episode Title"
+#   date: 2025-05-15
+#   description: "Brief description"
+#   video_url: "https://www.youtube.com/watch?v=..."
+
+- title: "Decode the Desk — DevOps Podcast"
+  episode: "The Hidden Skills That Make a DevOps Engineer Irreplaceable in the AI Era"
+  date: 2026-05-15
+  description: "Release engineering vs DevOps, core skills that still matter, the junior DevOps myth, and staying relevant in the AI era."
+  video_url: "https://www.youtube.com/watch?v=4vmuBM5dY-g"
+
+- title: "We Chat Tech Podcast"
+  episode: "Championing AWS and Karate"
+  date: 2026-01-01
+  description: "Journey to principal cloud engineer, community engagement, AI in development, and balancing tech with karate."
+  video_url: "https://www.youtube.com/watch?v=WutHrnXv4Ag"
+
+- title: "Cracking the Cloud Code"
+  episode: "TEK-UP Panel"
+  date: 2025-07-01
+  description: "Panel discussion on AWS certification tips, study strategies, and career guidance."
+  video_url: "https://www.youtube.com/watch?v=Q44wWfHlVPw"

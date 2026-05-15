@@ -32,14 +32,11 @@ subtitle: Principal Cloud Engineer @<a href="https://www.logicata.com/" target="
         <ul class="list-unstyled">
             <li class="mb-3">
                 <i class="bi bi-award-fill text-primary me-2"></i>
-                <strong>6 x AWS Certified:</strong>
+                <strong>{{ site.data.certifications.size }} x AWS Certified:</strong>
                 <ul class="mt-2">
-                    <li><a href="https://www.credly.com/badges/7246d1c5-3fed-475c-8ef8-7ff32f4e1bab/" target="_blank" rel="noopener noreferrer">Solutions Architect Professional</a></li>
-                    <li><a href="https://www.credly.com/badges/9cbfd1e2-043c-428b-bb4e-fb3a79c1247b" target="_blank" rel="noopener noreferrer">DevOps Engineer Professional</a></li>
-                    <li><a href="https://www.credly.com/badges/84f04474-d3b7-44ed-987a-bc544117af96" target="_blank" rel="noopener noreferrer">Solutions Architect Associate</a></li>
-                    <li><a href="https://www.credly.com/badges/fd13d5f9-9b0f-4de2-b4f8-67c664760116/" target="_blank" rel="noopener noreferrer">SysOps Administrator Associate</a></li>
-                    <li><a href="https://www.credly.com/badges/84963023-ae76-4057-b8b0-c867538b565c/" target="_blank" rel="noopener noreferrer">Developer Associate</a></li>
-                    <li><a href="https://www.credly.com/badges/23067b2a-cee7-4bb5-b65d-6ee3958b74ee/" target="_blank" rel="noopener noreferrer">Cloud Practitioner</a></li>
+                    {% for cert in site.data.certifications %}
+                    <li><a href="{{ cert.url }}" target="_blank" rel="noopener noreferrer">{{ cert.name }}</a></li>
+                    {% endfor %}
                 </ul>
             </li>
             <li class="mb-3">

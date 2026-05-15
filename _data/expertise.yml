@@ -1,0 +1,20 @@
+# Expertise cards for the homepage. Order determines display order.
+# - title: "Card Title"
+#   description: "Card description"
+#   icon: "bi-icon-name"
+#   style: "primary|secondary|accent"
+
+- title: "Cloud Infrastructure"
+  description: "AWS certified with expertise in serverless, containers, and infrastructure as code using Terraform and CloudFormation."
+  icon: "bi-cloud-fill"
+  style: "primary"
+
+- title: "DevOps & Automation"
+  description: "CI/CD pipelines, automated deployments, and infrastructure automation using Jenkins, Ansible, and modern DevOps practices."
+  icon: "bi-gear-fill"
+  style: "secondary"
+
+- title: "Monitoring & Observability"
+  description: "Real-time monitoring solutions, alerting systems, and observability for serverless and containerized applications."
+  icon: "bi-graph-up"
+  style: "accent"
