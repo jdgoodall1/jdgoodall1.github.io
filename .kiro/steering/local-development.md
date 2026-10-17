@@ -64,5 +64,3 @@ Full talk description / notes go here as markdown content.
 ```
 
 2. The talk will automatically appear on `/speaking/` and have its own page at `/speaking/your-talk-slug/`.
-
-3. Also update `_data/speaking.yml` to keep it in sync (used as a data reference).

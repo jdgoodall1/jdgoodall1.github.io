@@ -29,13 +29,19 @@ layout: default
                     {{ content }}
                 </div>
 
-                {% if page.slides_url or page.linkedin_url %}
+                {% if page.slides_url or page.linkedin_url or page.event_url %}
                 <div class="mt-4">
                     {% if page.slides_url %}<a href="{{ page.slides_url }}" class="btn btn-outline-primary me-2">
                         <i class="fa fa-file-powerpoint-o me-2"></i>Slides
                     </a>{% endif %}
-                    {% if page.linkedin_url %}<a href="{{ page.linkedin_url }}" class="btn btn-outline-primary">
+                    {% if page.linkedin_url %}<a href="{{ page.linkedin_url }}" class="btn btn-outline-primary me-2">
                         <i class="fa fa-linkedin me-2"></i>LinkedIn Post
+                    </a>{% endif %}
+                    {% if page.linkedin_url_2 %}<a href="{{ page.linkedin_url_2 }}" class="btn btn-outline-primary me-2">
+                        <i class="fa fa-linkedin me-2"></i>LinkedIn Post (Wrap-up)
+                    </a>{% endif %}
+                    {% if page.event_url %}<a href="{{ page.event_url }}" class="btn btn-outline-secondary me-2">
+                        <i class="fa fa-external-link me-2"></i>Event Agenda
                     </a>{% endif %}
                 </div>
                 {% endif %}
