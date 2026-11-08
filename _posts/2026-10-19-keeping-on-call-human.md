@@ -7,6 +7,7 @@ categories: [DevOps, AWS, Serverless]
 tags: [aws, serverless, lambda, step-functions, sqs, slack, on-call, alerting, sns, eventbridge]
 excerpt: "It's 2am, your phone is screaming. Most SREs have lived through it. Here's how I built a Slack bot backed by a few Lambdas and a Step Function to stop that happening unnecessarily."
 canonical_url: https://builder.aws.com/content/3Kv85OEnuUmFKOlE0wYZCJyaj7e/keeping-on-call-human
+image: /img/hero.webp
 ---
 
 ## A Short Horror Story
@@ -37,7 +38,7 @@ Turns out, in that case, the solution is a Slack bot backed by a few Lambdas. At
 
 The architecture looks like this:
 
-![Architecture diagram showing the Slack bot pipeline through API Gateway, Lambda, SQS, EventBridge Pipes, and a Step Function](/img/keeping-on-call-human-architecture.png)
+![Architecture diagram showing the Slack bot pipeline through API Gateway, Lambda, SQS, EventBridge Pipes, and a Step Function](/img/arch.webp)
 
 On the face of it, it's pretty simple — but the complexity is hiding in the Step Function.
 
@@ -54,6 +55,8 @@ On the face of it, it's pretty simple — but the complexity is hiding in the St
 ## Inside the Step Function
 
 Inside the Step Function, we have a rather wide flow — but it's not doing anything very complicated. Most of the logic is exposed to the Step Function, rather than being hidden away inside the Lambdas. We did this intentionally because it makes observability a bit simpler (v1 of this had a lot more inside one large Lambda, which bothered me).
+
+![Step Function flow diagram](/img/step.webp)
 
 Again, start to finish we:
 
